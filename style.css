@@ -1,85 +1,24 @@
+@font-face {
+    font-family: nunito;
+    src: url(./font_family/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: robboto;
+    src: url(./font_family/Roboto/Roboto-Regular.ttf);
+}
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-
+    font-family: robboto;
+    scroll-behavior: smooth;
 }
-
-.nav-c{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
- background-color: blue;
-    color: white;
-
-    animation: gradient  5s ease infinite;
+body{
+    background-color: white;
+    width: 100vw;
+    overflow-x: hidden;
 }
-
-
-
-.box-1  img{
-    border-radius: 12px;
-    vertical-align: -5px;
-    transition: all;
-    transition-duration: 1s;
-    transition-property: all;
-    
-    
-}
-
-.box-1 img:hover{
-    box-shadow: 5px 10px 10px;
-    background-color: azure;
-    cursor: pointer;
-
-}
-
-
-.box-1  a{
-    color: white;
-    text-decoration: none;
-
-    transition:all;
-    transition-duration: 1s;
-    transition-property: all;
-
-}
-.box-1 a:hover{
-    box-shadow: 5px 10px 10px;
-    background-color: azure;
-    cursor: pointer;
-
-
-
-}
-.box-2{
-    display: flex;
-    gap: 20px;
-
-}
-
-.box-2 img{
-    border-radius: 12px;
-    transition: all;
-    transition-duration: 1s;
-    transition-property: all;
-    
-    
-}
-.box-2  img:hover{ 
-    box-shadow: 5px 10px 10px;
-    background-color: azure;
-
-}
-
-/*  header */
-header{
-    overflow: hidden;
-}
-
+/* nav bar */
 header > nav{
     width: 100vw;
     padding: 1.5vw 6vw;
@@ -150,7 +89,7 @@ nav ul li:hover ul.drop_down{
 /* nav button */
 nav ul a > button{
     font-weight: bold;
-    
+    padding: 1vw;
     background-color: #0066EC;
     border: none;
     width: 13vw;
@@ -173,219 +112,267 @@ nav ul a > button:active{
 
 
 
-/* page 1 */
+/* hero section */
 
-.page-1{
 
-    
-overflow:hidden;
-    padding: 40px;
-    width: 1571px;
-    height: 980px;
-    background-image: url(./page1.jpg);
+
+
+
+
+#hero_section{
+    background-image: url(./images/slider-01-1.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-  
-
+    background-position: center;
+    width: 100vw;
+    height: auto;
+    margin-top: 7.5vw;
+    padding-top: 14vw;
+    padding-left: 1vw;
 }
-.page1-1{
-    overflow: hidden;
-    padding: 200px;
-}
-
-.page1-1  h1{
-    padding: 14px 20px;
-    background-color: blue;
+/* hero section main button */
+.main_button > button{
+    border: none;
+    border-radius: 3vw;
+    width: 16vw;
+    height: 3.7vw;
+    padding: 1vw;
+    background-color: #0066EC;
     color: white;
-    font-size: 16px;
-    font-family: sans-serif;
-    margin: 28px opx 7px;
-    display: inline;
-    border-radius: 15px;
-
-}
-
-.page1-1  h2{
-    font-family: sans-serif;
-    font-size: 58px;
-    font-weight: lighter;
-    margin:28px 300.400px 7px 0px;
-}
-.page1-1 span{
-    color: blue;
-    font-size: 58px;
-    font-family:sans-serif;
-
-
-}
-.page1-1 button{
-    padding: 20px;
-    margin-top: 40px;
-    border-radius: 50px;
-    background-color: blue;
-    font-weight: bolder;
-    color: white;
-    font-family: sans-serif;
-    transition: all;
-    transition-duration: 1s;
-    transition-property: all;
-
-
-}
-.page1-1 button:hover{
-    padding: 25px;
-    box-shadow: 5px 10px 10px;
-    background-color:lightslategray;
+    font-size: 1.2vw;
+    font-weight: bold;
     cursor: pointer;
-    
-
+    transition: all 0.3s;
+} 
+.main_button > button:hover{
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.05);
 }
-.page1-1 p{
-    padding: 10px;
+/* hero section headings */
+#hero_section >h1{
+    line-height: 6.3vw;
+    padding: 1vw 0;
+    width: 45vw;
+    font-size: 4.5vw;
+    font-weight: 100;
 }
-
-/* page 2 */
-.page-2{
-
-    width: 100%;
-    height: 40%;
+#hero_section h1>span{
+    font-weight: bold;
+    color: #0066EC;
+}
+#hero_section > p{
+    width: 45vw;
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+}
+/* hero section other two button */
+.hero_all_buttons{
+    margin: 4vw 0;
     display: flex;
-    justify-content: center;
- 
-    gap: 20px;
-    padding: 10px;
-    padding-left:300px;
-overflow-y: scroll;
-
+    justify-content: space-between;
+    width: 27vw;
 }
-.page2-2{
-width: 245px;
-height: 276px;
-border: solid 1px;
-padding: 50px 20px 35px;
-
+.hero_all_buttons >button{
+    font-size: 1.2vw;
+    padding: 1vw;
+    border-radius: 5vw;
+    width: 13vw;
+    height: 4.7vw;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
 }
-.center{
+button.blue{
+    background-color: #0066EC;
+    color: white;
+    border: 0.15vw solid #0066EC ;
+}
+button.white{
+    background-color: white;
+    color: #0066EC;
+    border: 0.15vw solid #0066EC ;
+}
+button.blue:hover{
+    background-color: white;
+    color: #0066EC;
+    transform: scale(1.04);
+}
+button.white:hover{
+    background-color: #0066EC;
+    color: white;
+    transform: scale(1.05);
+}
+/* hero section all cards */
+.hero_all_cards{
+    margin: 0 5vw;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    text-transform: capitalize;
-    font-family: sans-serif;
+    justify-content: space-evenly;
 }
-.center img{
+/* hero section cards one by one */
+#hero_section .card{
+    text-align: center;
+    position: relative;
+    top: 9vw;
+    width: 20vw;
+    height: auto;
+    background-color: white;
+    border-top: 0.3vw solid #0066EC;
+    padding: 6vw 3vw;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.42);
+    border-radius: 0.5vw;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#hero_section .card:hover{
+    transform: scale(1.04);
+    filter: brightness(90%);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.62);
+}
+/* card image */
+#hero_section .card >img{
+    width: 5vw;
+    height: 5vw;
     border-radius: 50%;
 }
-.center  h2{
-    font-size: 22px ;
-    
-
+/* card heading */
+#hero_section .card >h1{
+    margin: 1vw 0;
+    font-size: 1.7vw;
 }
-.center h2 a{
-    color: black;
-    text-decoration: none;
-    overflow-y: scroll;
-    
+/* card booking */
+#hero_section .card >p{
+    font-size: 1.3vw;
+    color: #0066EC;
 }
-.center h2 a:hover{
-    color: darkblue;
-
+#hero_section .card p > i{
+    font-size: 1.3vw;
+    color: #0066EC;
 }
 
-.center a {
-    text-decoration: none;
-    padding-top: 20px;
-}
-/* page 3 */
-.page-3 {
-    width: 1200px;
-    padding-top: 100px;
-    overflow: hidden;
-   
-    
 
 
 
 
-}
-.page3-3{
-    position: relative;
-    left: 550px;
-    bottom: 500px;
-    
+
+/* about section */
 
 
 
-}
-.page-3 h2{
-    font-size: 15px;
-    color: blue;
-    font-family: sans-serif;
-    padding: 10px;
 
-}
-.page-3 h3{
-    font-size: 30px;
-    font-weight: lighter;
-    font-family: sans-serif;
-    padding: 5px;
 
-}
-.page-3 h1{
-    font-size: 30px;
-    font-family: sans-serif;
-}
-.page-3 p{
-    font-family: sans-serif;
-    margin: 16px 0px 14px;
-    padding-top: 40px;
-}
-.small3 {
+
+
+#about_section{
+    width: 100vw;
+    margin-top: 20vw;
+    margin-bottom: 8vw;
     display: flex;
-    padding-top: 50px;
-    
+    justify-content: space-between;
+    height: auto;
+    padding: 0 6vw;
 }
-.small3 h4{
-    position: relative;
-    left: 10px;
+/* about section image */
+.about_setion_image img{
+    width: 40vw;
+    height: auto;
+    transition: all 0.5s;
+    cursor: pointer;
 }
-.small3 p{
-    position: relative;
-    right: 100px;
-    bottom: 30px;
+.about_setion_image img:hover{
+    filter: brightness(40%);
+    transform: scale(1.03);
 }
-.small4{
+/* about section detail description */
+.about_section_description{
+    width: 55vw;
+    padding: 0 4vw;
+}
+/* description headings */
+.about_section_description >h2, .our_agency_detail >h2 ,.agency_two_description >h2,.update_heading>h2{
+    color: #0066EC;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+}
+.about_section_description >h3, .our_agency_detail> h3 ,.agency_two_description >h3{
+    margin-top: 2vw;
+    font-size: 3vw;
+    font-weight: 100;
+    line-height: 4.5vw;
+}
+.about_section_description  h3 >span, .our_agency_detail> h3 span , .agency_two_description > h3 span{
+    font-weight: 900;
+}
+/* description paraghraph */
+.about_section_description >p {
+    font-size: 1.2vw;
+    color: rgba(0, 0, 0, 0.524);
+    padding: 2.5vw 0;
+    line-height: 2vw;
+}
+/* about section guidance */
+.about_section_guidance{
     display: flex;
-    padding-top: 50px;
-    position: relative;
-    left: 350px;
-    bottom: 165px ;
-   
+    justify-content: space-between;
 }
-.small4 h4{
-    position: relative;
-    left: 10px;
+.guidance{
+    padding-left: 1vw;
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
 }
-.small4 p{
+.guidance_icon img{
+    width: 4vw;
+    height: 4.2vw;
+}
+.travel_buisness > img{
+    width: 4.5vw;
+    height: 4vw;
     position: relative;
-    right: 100px;
-    bottom: 30px;}
-
-    .btn{
-        padding: 20px;
-        border-radius: 40px;
-        background-color: #0066EC;
-        font-weight: bolder;
-        color: aliceblue;
-        position: relative;
-        bottom: 100px;
-    }
-.btn:hover
-{
-    padding: 25px;
+    /* bottom: 1vw; */
+}
+.guidance_detail{
+    padding-left: 1.5vw;
+    line-height: 1.9vw;
+}
+.guidance_detail > h4{
+    margin-bottom: 0.5vw;
+    font-size: 1.3vw;
+}
+.guidance_detail > p{
+    color: rgba(0, 0, 0, 0.524);
+    font-size: 1.2vw;
+}
+/* about section button */
+.about_section_description >button{
+    width: 14vw;
+    height: 4.5vw;
+    background-color: #0066EC;
+    border-radius: 5vw;
+    color: white;
+    padding: 1vw;
+    border: none;
+    margin-top: 2vw;
+    font-weight: 900;
+    font-size: 1.2vw;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.about_section_description >button:hover{
     background-color: black;
+    transform: scale(1.05);
 }
 
-/* PAGE 4 */
+
+
+
+
+
+/* service section */
+
+
+
 
 
 #service_section{
@@ -394,7 +381,6 @@ padding: 50px 20px 35px;
     padding: 7vw 6vw 4vw 6vw;
     background-color: #2B3043;
     color: white;
-    
 }
 /* services section headings */
 #service_section > h2, #member_section>h2,#feedback_section>h3{
@@ -527,79 +513,74 @@ padding: 50px 20px 35px;
     background-color: black;
     transform: scale(1.05);
 }
- 
-.page-5{
-padding-top: 200px;
 
 
 
 
+/* Member section */
+
+
+
+
+#member_section{
+    background-color: rgb(255, 251, 251);
+    width: 100vw;
+    height: auto;
+    padding: 13vw 6vw 0 6vw;
 }
-.page5-5{
-    font-family: sans-serif;
-text-align: center;
-padding: 20px;
-
-
-}
-.page5-5  h3{
-    color: #0066EC;
-    padding-bottom: 20px;
-
-}
-.page5-5 h2{
-    font-size: 34px;
+/* member section heading */
+#member_section>h3{
+    padding: 2vw 0;
+    font-size: 3vw;
     font-weight: 100;
-}
-
-
-.all-cards{
-   
-    display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-   
-
-
-}
-
-.data{
-    font-family: sans-serif
+    line-height: 4.5vw;
+    width: 50vw;
+    margin: 0 19vw;
     text-align: center;
-    border: solid 1px;
-    padding: 20px;
-    transition-duration: 1s;
-    transition-property: all;
-    
-  
-   
-  
 }
-.data:hover{
-    background-color: gray;
-    color: aliceblue;
+/* member section all cards */
+.member_all_cards{
+    display: flex;
+    justify-content: space-between;
 }
-
-.all-cards  img{
-    transition-duration: 300ms;
-    transition-property: all;
-
-    
+/* member section image */
+.member_card img{
+    width: 28.5vw;
+    height: auto;
+    transition: all 0.4s;
 }
-.all-cards  img:hover{
-    padding: 20px;
-    background-color: lightgray;
-    filter: grayscale();
-    
+.member_card img:hover{
+    transform: scale(1.04);
+    filter: brightness(45%);
 }
-
-
-
-
-.data p{
+/* member information */
+.member_info{
+    margin: 0 1.5vw;
+    width: 25.5vw;
+    background-color: white;
+    text-align: center;
+    padding: 1.8vw 0;
+    border-bottom: 0.3vw solid #0066EC;
+    position: relative;
+    bottom: 4.5vw;
+    border-radius: 0.5vw;
+    line-height: 2.5vw;
+}
+.member_info >h2{
+    font-size: 1.5vw;
+}
+.member_info >p{
+    font-size: 1.3vw;
     color: #0066EC;
-    padding-top: 10px;
 }
+
+
+
+
+
+/* our agency */
+
+
 
 
 #our_agency_section{
@@ -610,12 +591,6 @@ padding: 20px;
     padding: 6vw;
     padding-bottom: 7vw;
     margin-top: 5vw;
-    font-family: sans-serif
-}
-.our_agency_detail h2{
-padding: 20px;
-color: #0066EC;
-text-transform: capitalize;
 }
 /* our agency detail descriprion */
 .our_agency_detail{
@@ -628,7 +603,6 @@ text-transform: capitalize;
     padding: 2vw 0;
     line-height: 2vw;
 }
-   
 /* our agency list to show percentage */
 .percentage > li{
     list-style-type: none;
@@ -695,6 +669,8 @@ span.big{
 
 
 
+
+
 /* our gallery section */
 
 
@@ -716,8 +692,6 @@ span.big{
     color: #FFFFFF;
     padding: 4vw 30vw;
 }
-
-
 .gallery_section_heading> h2{
     font-size:1.3vw ;
     text-transform: uppercase;
@@ -977,7 +951,6 @@ ul.question_answer input[type="radio"]:checked + label{
 
 
 
-
 #logo_section{
     width: 100vw;
     height: auto;
@@ -1174,5 +1147,3 @@ ul.question_answer input[type="radio"]:checked + label{
     z-index: 100;
     cursor: pointer;
 }
-
-
